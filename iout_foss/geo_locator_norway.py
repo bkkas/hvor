@@ -3,9 +3,15 @@ from functools import lru_cache
 from pathlib import Path
 
 import geopandas as gpd
+import pandas as pd
 
 
 @lru_cache(maxsize=None)
+def _load_fylker():
+    """Loads data for fylker and fylkesnummer"""
+    pass
+
+
 def _load_kommuner():
     """Loads data for kommuner and kommunenummer"""
     filepath = (
@@ -15,7 +21,9 @@ def _load_kommuner():
         return gpd.read_file(f)
 
 
-def get_kommune_owning_points(df, pos_col_name=None, lat_name=None, lon_name=None):
+def get_kommune_owning_points(
+    df, pos_col_name=None, lat_name=None, lon_name=None
+) -> pd.DataFrame:
     kommuner = _load_kommuner()
     if pos_col_name:
         latitudes = df[pos_col_name].map(lambda x: x[0])
