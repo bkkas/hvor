@@ -1,21 +1,23 @@
 import bz2
 from functools import lru_cache
+from pathlib import Path
 
 import geopandas as gpd
 import pkg_resources
 
 
 @lru_cache(maxsize=None)
-def load_kommuner():
-    filepath = pkg_resources.resource_filename(
-        "resources", "Kommuner-2020-large.json.bz2"
+def _load_kommuner():
+    """Loads data for kommuner and kommunenummer"""
+    filepath = (
+        Path(__file__).joinpath("../resources/Kommuner-2020-large.json.bz2").resolve()
     )
     with bz2.open(filepath, mode="rt", encoding="utf-8") as f:
         return gpd.read_file(f)
 
 
 def get_kommune_owning_points(df, pos_col_name=None, lat_name=None, lon_name=None):
-    kommuner = load_kommuner()
+    kommuner = _load_kommuner()
     if pos_col_name:
         latitudes = df[pos_col_name].map(lambda x: x[0])
         longitutes = df[pos_col_name].map(lambda x: x[1])

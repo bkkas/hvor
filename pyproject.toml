@@ -1,15 +1,18 @@
 [tool.poetry]
-name = "tempname"
+name = "iout_foss"
 version = "0.1.0"
 description = "An open source Python-package for adding metadata to geospatial datasets"
 authors = ["Espen Hafstad Solvang <espenhafstadsolvang@gmail.com>"]
-include = ["resources/Kommuner-2020-large.json.bz2"
+include = ["iout_foss/resources/Kommuner-2020-large.json.bz2"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 geopandas = "^0.9.0"
+setuptools = "^57.4.0"
+Rtree = "^0.9.7"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
