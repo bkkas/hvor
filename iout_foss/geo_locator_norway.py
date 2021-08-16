@@ -3,7 +3,6 @@ from functools import lru_cache
 from pathlib import Path
 
 import geopandas as gpd
-import pkg_resources
 
 
 @lru_cache(maxsize=None)
