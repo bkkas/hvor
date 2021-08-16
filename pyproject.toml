@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "tempname"
+version = "0.1.0"
+description = "An open source Python-package for adding metadata to geospatial datasets"
+authors = ["Espen Hafstad Solvang <espenhafstadsolvang@gmail.com>"]
+include = ["resources/Kommuner-2020-large.json.bz2"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+geopandas = "^0.9.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
