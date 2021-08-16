@@ -3,6 +3,7 @@ import pandas as pd
 from iout_foss.geo_locator_norway import get_kommune_owning_points
 
 
+
 def test_get_kommune_owning_points():
     """Tests a few points with and without kommuner."""
     goal = pd.DataFrame(
