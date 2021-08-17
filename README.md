@@ -6,9 +6,9 @@ each coordinate belongs to, `hvor` can help you.
 
 ## Installation
 
-´´´
+```
 pip install hvor
-´´´
+```
 
 ## Usage
 
@@ -19,4 +19,11 @@ df = add_metadata_columns_to_df(df)
 ```
 
 Voila! County and municipality metadata for your coordinates have been added to
-your dataframe.
+your dataframe (\*but only if your latitude and longitude columns were called
+`lat` and `lon`😅).
+
+## Credits
+
+Big thanks to [robhop](https://github.com/robhop) for sharing his lightly
+processed county and municipality polygons. Also big thanks to Kartverket, for
+supplying the original dataset.
