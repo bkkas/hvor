@@ -27,6 +27,14 @@ def add_metadata_columns_to_df(
             lon_column_name=lon_column_name,
         )
 
+    if "fylkesdata" in metadata_to_add:
+        df = _add_fylke_metadata_columns_to_df(
+            df,
+            how=how,
+            lat_column_name=lat_column_name,
+            lon_column_name=lon_column_name,
+        )
+
     return df
 
 
@@ -47,26 +55,20 @@ def _add_kommune_metadata_columns_to_df(
     )
 
 
-def _add_fylke_metadata_columns_to_df(df, how) -> pd.DataFrame:
+def _add_fylke_metadata_columns_to_df(
+    df, how, lat_column_name, lon_column_name
+) -> pd.DataFrame:
     fylkesdata = _load_fylkesdata()
 
-    return df
-
-
-def get_kommune_owning_points(
-    df, pos_col_name=None, lat_name=None, lon_name=None
-) -> pd.DataFrame:
-    kommuner = _load_kommunedata()
-    if pos_col_name:
-        latitudes = df[pos_col_name].map(lambda x: x[0])
-        longitutes = df[pos_col_name].map(lambda x: x[1])
-    elif lat_name and lon_name:
-        latitudes = df[lat_name]
-        longitutes = df[lon_name]
-    else:
-        raise ValueError(
-            "Either pos_col_name or lat_name AND lon_name must be " "provided"
-        )
+    goal = gpd.GeoDataFrame(
+        df,
+        geometry=gpd.points_from_xy(
+            df[lon_column_name], df[lat_column_name], crs="EPSG:4326"
+        ),
+    )
+    return gpd.sjoin(goal, fylkesdata, how=how, op="within").drop(
+        ["geometry", "index_right"], axis=1
+    )
 
 
 @lru_cache(maxsize=None)
@@ -82,4 +84,8 @@ def _load_kommunedata():
 @lru_cache(maxsize=None)
 def _load_fylkesdata():
     """Loads data for fylker and fylkesnummer"""
-    pass
+    filepath = (
+        Path(__file__).joinpath("../resources/Fylker-2020-large.json.bz2").resolve()
+    )
+    with bz2.open(filepath, mode="rt", encoding="utf-8") as f:
+        return gpd.read_file(f)
