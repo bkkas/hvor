@@ -1,7 +1,7 @@
 name: Build and publish package
 
 on:
-  pull_request:
+  release:
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         pip install poetry
         poetry install
     - name: Build and publish package
-      with:
+      env:
         PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
       run: |
         poetry config pypi-token.pypi $PYPI_TOKEN
