@@ -1,6 +1,6 @@
 import pandas as pd
 
-from iout_foss.geo_locator_norway import add_metadata_columns_to_df
+from hvor.geo_locator_norway import add_metadata_columns_to_df
 
 df_coordinates = pd.DataFrame(
     {
