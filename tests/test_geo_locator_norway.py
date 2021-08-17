@@ -1,9 +1,9 @@
 import pandas as pd
 
-from iout_foss.geo_locator_norway import get_kommune_owning_points
+from iout_foss.geo_locator_norway import add_metadata_columns_to_df
 
 
-def test_get_kommune_owning_points():
+def test_add_kommune_columns_to_df():
     """Tests a few points with and without kommuner."""
     goal = pd.DataFrame(
         {
@@ -23,6 +23,13 @@ def test_get_kommune_owning_points():
             ],
         }
     )
-    res = get_kommune_owning_points(goal, lat_name="lat", lon_name="lon")
-    assert list(res.kommunenummer) == [4601, 4628, 4621]
-    assert list(res.navn) == ["Bergen", "Vaksdal", "Voss"]
+    res = add_metadata_columns_to_df(
+        goal,
+        metadata_to_add=["kommunedata"],
+        lat_column_name="lat",
+        lon_column_name="lon",
+    )
+    print(res)
+    assert list(res.kommunenummer.dropna()) == [4601, 4628, 4621]
+    assert list(res.navn.dropna()) == ["Bergen", "Vaksdal", "Voss"]
+    # assert False, "For debugging"
