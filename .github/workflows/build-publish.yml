@@ -1,7 +1,7 @@
 name: Build and publish package
 
 on:
-  pull_request:
+  release:
 
 jobs:
   build:
