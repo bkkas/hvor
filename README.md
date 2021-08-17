@@ -6,6 +6,8 @@ each coordinate belongs to, `hvor` can help you.
 
 ## Installation
 
+Simply run
+
 ```
 pip install hvor
 ```
