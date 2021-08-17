@@ -3,8 +3,13 @@ name = "hvor"
 version = "0.1.0"
 description = "A library for assigning Norwegian metadata to coordinates"
 authors = ["Espen Hafstad Solvang <espenhafstadsolvang@gmail.com>"]
-include = ["iout_foss/resources/Kommuner-2020-large.json.bz2"]
+#license = "unknown :("
+keywords = ["pandas", "dataframe", "geopandas"]
+readme = "README.md"
+homepage = "https://github.com/bkkas/iout_foss"
+repository = "https://github.com/bkkas/iout_foss"
 
+include = ["CHANGELOG.md"]
 [tool.poetry.dependencies]
 python = "^3.8"
 geopandas = "^0.9.0"
