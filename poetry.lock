@@ -154,7 +154,7 @@ python-versions = "*"
 name = "isort"
 version = "5.9.3"
 description = "A Python utility / library to sort Python imports."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6.1,<4.0"
 
@@ -306,7 +306,7 @@ toml = "*"
 name = "pytest-isort"
 version = "2.0.0"
 description = "py.test plugin to check import ordering using isort"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -391,7 +391,7 @@ python-versions = ">=3.6"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "330240254600d61408f072e8c62ac28de4b0e1216382a4bf7e30be78d1f4b7b4"
+content-hash = "661f7bcce59243572c5b9509e0d7841bc18762b59d5642b7e9cf228db122bad9"
 
 [metadata.files]
 appdirs = [
