@@ -1,4 +1,4 @@
-from hvor.hvor_utils import _get_fylke_metadata, _get_kommune_metadata
+from hvor.utils import _get_fylke_metadata, _get_kommune_metadata
 
 funcs_dict = {
     "kommunedata": _get_kommune_metadata,

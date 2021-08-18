@@ -20,15 +20,26 @@ pip install hvor
 
 ## Bruk
 
-```python
-from hvor import add_metadata_columns_to_df
+For et enkeltpunkt med latitude og longitude, bruk `point`
 
-df = add_metadata_columns_to_df(df)
+```python
+>>> from hvor import point
+>>> point(61.7327867684485, 5.540150406971685)
+{'kommunenumer': [4602], 'kommune': ['Kinn'], 'lat': [61.7327867684485], 'lon': [5.540150406971685], 'fylkesnummer': [46], 'fylke': ['Vestland']}
 ```
 
-Vipps! Kommune- og fylkesdata har blitt lagt til dataframen med koordinatene
-dine. (\*men kun hvis bredde- og lengdegradkolonnene dine het `lat` and
-`lon`😅).
+For flere koordinater, igjen med latitude og longitude, bruk `points` (merk
+**s** på slutten)
+
+```python
+>>> from hvor import points
+>>> coordinates = {"lat": [63.414109, 69.14579124011655], "lon": [10.416230, 18.15361374220361]}
+>>> points(coordinates)
+{'kommunenummer': [5001, 5419], 'kommune': ['Trondheim', 'Sørreisa'], 'lat': [63.414109, 69.14579124011655], 'lon': [10.41623, 18.15361374220361], 'fylkesnummer': [50, 54], 'fylke': ['Trøndelag', 'Troms og Finnmark']}
+```
+
+Vipps, så har du kommune- og fylkesdata for koordinatene. (\*men kun hvis
+nøklene dine for bredde- og lengdegrad dine het `lat` og `lon`😅).
 
 ## Credits
 
