@@ -4,8 +4,7 @@
 
 Har du en eller flere koordinater innenfor Norges geografiske grenser som du
 gjerne skulle visst mer om? `hvor` er et Python-bibliotek for å hente ut ulike
-typer data for koordinater i Norge. Vi baserer oss på bruk av `pandas` og
-`geopandas`. Data som kan hentes inkluderer:
+typer data for koordinater i Norge. Data som kan hentes inkluderer:
 
 - Kommunedata (kommune og kommunenummer)
 - Fylkesdata (fylke og fylkesnummer)
