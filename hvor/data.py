@@ -6,7 +6,7 @@ import geopandas as gpd
 
 
 @lru_cache(maxsize=None)
-def _load_kommunedata():
+def load_kommunedata():
     """Loads data for kommuner and kommunenummer"""
     filepath = (
         Path(__file__).joinpath("../resources/Kommuner-2020-large.json.bz2").resolve()
@@ -18,7 +18,7 @@ def _load_kommunedata():
 
 
 @lru_cache(maxsize=None)
-def _load_fylkesdata():
+def load_fylkesdata():
     """Loads data for fylker and fylkesnummer"""
     filepath = (
         Path(__file__).joinpath("../resources/Fylker-2020-large.json.bz2").resolve()

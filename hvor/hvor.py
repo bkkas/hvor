@@ -1,8 +1,8 @@
-from hvor.utils import _get_fylke_metadata, _get_kommune_metadata
+from hvor.geolocator import get_fylke_metadata, get_kommune_metadata
 
 funcs_dict = {
-    "kommunedata": _get_kommune_metadata,
-    "fylkesdata": _get_fylke_metadata,
+    "kommunedata": get_kommune_metadata,
+    "fylkesdata": get_fylke_metadata,
 }
 PERMITTED_FIELDS = funcs_dict.keys()
 
