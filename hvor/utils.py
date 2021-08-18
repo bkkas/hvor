@@ -32,6 +32,6 @@ def _get_fylke_metadata(coordinates, lat_key, lon_key) -> pd.DataFrame:
     )
     return (
         gpd.sjoin(goal, fylkesdata, how="left", op="within")
-        .drop(["geometry", "index_right"], axis=1)
+        .drop(["geometry", "index_right", "lat", "lon"], axis=1)
         .to_dict(orient="list")
     )
