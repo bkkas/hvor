@@ -1,18 +1,24 @@
 # Hvor
 
-A library for assigning Norwegian metadata to coordinates. For example, if you
-have a list of coordinates, and you'd like to know which county and municipality
-each coordinate belongs to, `hvor` can help you.
+Har du en eller flere koordinater innenfor Norges geografiske grenser som du
+gjerne skulle visst mer om? `hvor` er et Python-bibliotek for å hente ut ulike
+typer data for koordinater i Norge. Vi baserer oss på bruk av `pandas` og
+`geopandas`. Data som kan hentes inkluderer:
 
-## Installation
+- Kommunedata (kommune og kommunenummer)
+- Fylkesdata (fylke og fylkesnummer)
 
-Simply run
+Flere typer data vil bli lagt til etterhvert!
+
+## Installering
+
+Så enkelt som
 
 ```
 pip install hvor
 ```
 
-## Usage
+## Bruk
 
 ```python
 from hvor import add_metadata_columns_to_df
@@ -20,12 +26,13 @@ from hvor import add_metadata_columns_to_df
 df = add_metadata_columns_to_df(df)
 ```
 
-Voila! County and municipality metadata for your coordinates have been added to
-your dataframe (\*but only if your latitude and longitude columns were called
-`lat` and `lon`😅).
+Vipps! Kommune- og fylkesdata har blitt lagt til dataframen med koordinatene
+dine. (\*men kun hvis bredde- og lengdegradkolonnene dine het `lat` and
+`lon`😅).
 
 ## Credits
 
-Big thanks to [robhop](https://github.com/robhop) for sharing his lightly
-processed county and municipality polygons. Also big thanks to Kartverket, for
-supplying the original dataset.
+Tusen takk til
+
+- [robhop](https://github.com/robhop) for deling av lettprosesserte kommune- og fylkesdata.
+- Kartverket for offentliggjøring av høykvalitets kartdata
