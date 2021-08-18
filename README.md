@@ -1,5 +1,7 @@
 # Hvor
 
+![example workflow](https://github.com/bkkas/hvor/actions/workflows/python-app.yml/badge.svg)
+
 Har du en eller flere koordinater innenfor Norges geografiske grenser som du
 gjerne skulle visst mer om? `hvor` er et Python-bibliotek for å hente ut ulike
 typer data for koordinater i Norge. Vi baserer oss på bruk av `pandas` og
