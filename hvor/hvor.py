@@ -16,7 +16,13 @@ def points(
     """Takes multiple coordinates and returns metadata about each point.
 
     Args:
-        coordinates: dict-like with indexed "lat" and "lon" lists (TODO make docstring make sense)
+        coordinates (dict): dict-like with keys "lat" and "lon", where at each key there
+            is a list-like object containing latitude/longitude floats.
+        metadata_to_add (list): list of strings of what you'd like to know about the
+            specified coordinates, e.g. "kommunedata" or "fylkesdata"
+        lat_key (str): the key to use with ``coordinates`` to get latitudes.
+        lon_key (str): the key to use with ``coordinates`` to get longitudes.
+
 
     """
     coordinates_metadata = {}
@@ -37,10 +43,23 @@ def points(
 def point(
     lat: float,
     lon: float,
-    metadata_to_add=PERMITTED_FIELDS,
-    lat_key="lat",
-    lon_key="lon",
+    metadata_to_add: list = PERMITTED_FIELDS,
+    lat_key: str = "lat",
+    lon_key: str = "lon",
 ) -> dict:
+    """Takes multiple coordinates and returns metadata about each point. Implemented as
+    a wrapper around ``points``
+
+    Args:
+        lat (float): latitude of a single coordinate
+        lon (float): longitude of a single coordinate
+        metadata_to_add (list): list of strings of what you'd like to know about the
+            specified coordinates, e.g. "kommunedata" or "fylkesdata"
+        lat_key (str): the key to use with ``coordinates`` to get latitudes.
+        lon_key (str): the key to use with ``coordinates`` to get longitudes.
+
+    """
+
     coordinates = {"lat": [lat], "lon": [lon]}
     return points(
         coordinates=coordinates,
