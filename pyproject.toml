@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "hvor"
+version = "0.1.2"
+description = "A library for assigning Norwegian metadata to coordinates"
+authors = ["Espen Hafstad Solvang <espenhafstadsolvang@gmail.com>"]
+#license = "unknown :("
+keywords = ["pandas", "dataframe", "geopandas"]
+readme = "README.md"
+homepage = "https://github.com/bkkas/iout_foss"
+repository = "https://github.com/bkkas/iout_foss"
+
+include = ["CHANGELOG.md"]
+[tool.poetry.dependencies]
+python = "^3.8"
+geopandas = "^0.9.0"
+setuptools = "^57.4.0"
+Rtree = "^0.9.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+black = "^21.7b0"
+pytest-black = "^0.3.12"
+pytest-isort = "^2.0.0"
+Sphinx = "^4.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
