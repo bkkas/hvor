@@ -1,6 +1,7 @@
 # Hvor
 
 ![example workflow](https://github.com/bkkas/hvor/actions/workflows/python-app.yml/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/hvor/badge/?version=latest)](https://hvor.readthedocs.io/en/latest/?badge=latest)
 
 Har du en eller flere koordinater innenfor Norges geografiske grenser som du
 gjerne skulle visst mer om? `hvor` er et Python-bibliotek for å hente ut ulike
