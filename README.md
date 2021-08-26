@@ -2,6 +2,7 @@
 
 ![example workflow](https://github.com/bkkas/hvor/actions/workflows/python-app.yml/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/hvor/badge/?version=latest)](https://hvor.readthedocs.io/en/latest/?badge=latest)
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 Har du en eller flere koordinater innenfor Norges geografiske grenser som du
 gjerne skulle visst mer om? `hvor` er et Python-bibliotek for å hente ut ulike
