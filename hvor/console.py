@@ -25,7 +25,7 @@ def main():
     if "-h" in sys.argv or "--help" in sys.argv:
         _exit_with_usage()
     if len(sys.argv) != 3:
-        exit("Usage: hvor p1 p2")
+        _exit_with_usage("Usage: hvor lat lon")
     s1 = sys.argv[1]
     s2 = sys.argv[2]
     try:
