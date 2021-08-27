@@ -6,18 +6,18 @@ from .hvor import point
 
 def _exit_with_usage(msg=None):
     if not msg:
-        print("Usage: hvor p1 p2")
+        print("Usage: hvor lat lon")
         sys.exit()
     else:
         # exit code = 1 when sys.exit receives message
         sys.exit(msg)
 
 
-def _print_point_to_json(p1: float, p2: float) -> None:
+def _print_point_to_json(lat: float, lon: float) -> None:
     """This function is called when hvor is called from the console.
     It prints the point dict to std.out.
     """
-    pt = point(p1, p2)
+    pt = point(lat, lon)
     print(json.dumps(pt, indent=4))
 
 
