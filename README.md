@@ -1,6 +1,6 @@
 # Hvor
 
-![example workflow](https://github.com/bkkas/hvor/actions/workflows/python-app.yml/badge.svg)
+[![example workflow](https://github.com/bkkas/hvor/actions/workflows/python-app.yml/badge.svg)](https://github.com/bkkas/hvor/actions/workflows/python-app.yml)
 [![Documentation Status](https://readthedocs.org/projects/hvor/badge/?version=latest)](https://hvor.readthedocs.io/en/latest/?badge=latest)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
@@ -42,7 +42,7 @@ For flere koordinater, igjen med latitude og longitude, bruk `points` (merk
 ```
 
 Vipps, så har du kommune- og fylkesdata for koordinatene. (\*men kun hvis
-nøklene dine for bredde- og lengdegrad dine het `lat` og `lon`😅).
+nøklene for bredde- og lengdegradlistene dine het `lat` og `lon`😅).
 
 ## Credits
 
