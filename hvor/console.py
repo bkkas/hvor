@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-import sys
 import json
+import sys
+
 from .hvor import point
 
 
