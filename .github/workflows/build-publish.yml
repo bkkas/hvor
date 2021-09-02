@@ -2,6 +2,7 @@ name: Build and publish package
 
 on:
   release:
+    types: [published]
 
 jobs:
   build:
