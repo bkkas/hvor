@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hvor"
-version = "0.2.0"
+version = "0.0.0"
 description = "A library for assigning Norwegian metadata to coordinates"
 authors = ["Espen Hafstad Solvang, Erik Parmann, Kristian Flikka, Anna-Lena Both, Pål Grønås Drange"]
 #license = "unknown :("
