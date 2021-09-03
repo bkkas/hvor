@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "hvor"
-version = "0.2.0"
+version = "0.0.0"  # publish pipeline sets sets version to current git tag
 description = "A library for assigning Norwegian metadata to coordinates"
 authors = ["Espen Hafstad Solvang, Erik Parmann, Kristian Flikka, Anna-Lena Both, Pål Grønås Drange"]
-#license = "unknown :("
+license = "LGPL-3.0"
 keywords = ["pandas", "dataframe", "geopandas"]
 readme = "README.md"
 repository = "https://github.com/bkkas/iout_foss"
