@@ -6,7 +6,7 @@ authors = ["Espen Hafstad Solvang, Erik Parmann, Kristian Flikka, Anna-Lena Both
 license = "LGPL-3.0"
 keywords = ["pandas", "dataframe", "geopandas"]
 readme = "README.md"
-repository = "https://github.com/bkkas/iout_foss"
+repository = "https://github.com/bkkas/hvor"
 
 include = ["CHANGELOG.md"]
 
