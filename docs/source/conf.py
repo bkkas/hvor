@@ -1,3 +1,5 @@
+import os
+
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full
@@ -22,7 +24,7 @@ copyright = "2021, Espen Hafstad Solvang"
 author = "Espen Hafstad Solvang"
 
 # The full version, including alpha/beta/rc tags
-release = "v0.1.2"
+release = os.popen("git describe --tags --abbrev=0").read()  # e.g. 0.2.1
 
 
 # -- General configuration ---------------------------------------------------
